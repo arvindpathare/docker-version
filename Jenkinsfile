@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+					sh 'docker login -u arvindpathare -p Sai@baba123'
                     def version = readFile('VERSION')
                     def versions = version.split('\\.')
                     def major = versions[0]
